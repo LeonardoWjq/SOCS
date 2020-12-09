@@ -8,7 +8,7 @@ const methodOverride = require('method-override')
 const app = express()
 
 //--------------------------------------connect to database--------------------------
-mongoose.connect('mongodb://cs307-group08%40fall2020-comp307.cs.mcgill.ca:CFDGqmd2Vt6Kv4rS@cs307-group01-DB:27017/socs',
+mongoose.connect('mongodb://cs307-group08%40fall2020-comp307.cs.mcgill.ca:CFDGqmd2Vt6Kv4rS@cs307-group08-DB:27017/socs',
 {useNewUrlParser: true, useUnifiedTopology:true,useCreateIndex:true})
 .then(()=>{
     console.log("Connection to the socs database has been established successfully.")
