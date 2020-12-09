@@ -1,0 +1,33 @@
+<% layout('./layouts/template') %>
+<div class="container-fluid">
+
+    <div class="row text-center">
+        <div class="col-12 mt-3">
+            <h1>Administration Center</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--leave the first column blank-->
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <!--SIDEBAR-->
+            <%- include('../partials/sidebarAdmin')%>
+            <!-- log out button -->
+            <form action="/logout" method="POST" class="my-2">
+                <button class="btn-lg btn-primary">Sign Out</button>
+            </form>
+        </div>
+
+
+        <div class="col-lg-8" id="text-back">
+            <!-- SEARCH BAR -->
+            <%- include('../partials/search') %>
+        </div>
+        <!--leave the last column blank-->
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+

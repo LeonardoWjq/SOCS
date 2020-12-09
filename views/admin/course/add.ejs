@@ -1,0 +1,66 @@
+<%- layout('layouts/template') %>
+<h1 class="text-center">Add New Course</h1>
+<div class="container py-3">
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <form action="/admin/course/add" method="POST">
+                <div class="form-group">
+                    <label for="code">Course Code:</label>
+                    <input type="text" name="code" id="code" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Course Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="credit">Credits:</label>
+                    <input type="number" name="credit" id="credit" class="form-control" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="term">Term Offered:</label>
+                    <input type="text" name="term" id="term" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructor">Instructor:</label>
+                    <input type="text" name="instructor" id="instructor" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prerequisite">Prerequisites:</label>
+                    <input type="text" name="prerequisite" id="prerequisite" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Select Availability: </label>
+                    <select name="availability" id="availability" class="form-control">
+                        <option value="available">available</option>
+                        <option value="unavailable">unavailable</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="restriction">Restriction:</label>
+                    <input type="text" name="restriction" id="restriction" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea name="notes" id="notes" class="form-control" cols="30" rows="10"
+                        placeholder="Input HTML or Plain Text (Optional)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional">Additional:</label>
+                    <textarea name="additional" id="additional" class="form-control" cols="30" rows="10"
+                        placeholder="Input HTML or Plain Text (Optional)"></textarea>
+                </div>
+
+                <button class="btn btn-primary">Add Posting</button>
+            </form>
+        </div>
+    </div>
+</div>

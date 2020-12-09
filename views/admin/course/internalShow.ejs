@@ -1,0 +1,30 @@
+<%- layout('./layouts/template') %>
+<div class="card">
+    <div class="card-body">
+        <div>
+            <h1><%= course.code%></h1>
+        </div>
+        <div>
+            <h5><%= course.title %></h5>
+        </div>
+        <div><span>Credits: </span><%= course.credit %></div>
+        <div><span>Term Offered: </span><%= course.term %></div>
+        <div><span>Instructor: </span><%= course.instructor %></div>
+        <div><span>Prerequisites: </span><%= course.prerequisite %></div>
+        <div>
+            <span class="badge <%- course.availability=="available" ? "badge-success" : "badge-danger"%>">
+                <%= course.availability%>
+            </span>
+        </div>
+        <div><span>Restriction: </span><%= course.restriction %></div>
+        <div><span>Notes: </span><%- course.notes %></div>
+        <hr>
+        <div><%- course.additional %></div>
+        <div class="my-4">
+            <form action="/admin/course/manage" method="GET" class="d-inline"><button
+                    class="btn btn-success">Done</button></form>
+            <form action="/admin/course/<%=course._id%>/edit" method="GET" class="d-inline ml-3"><button
+                    class="btn btn-primary">Edit</button></form>
+        </div>
+    </div>
+</div>

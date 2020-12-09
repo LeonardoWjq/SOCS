@@ -1,0 +1,15 @@
+<%- layout('./layouts/template') %>
+<div class="card">
+    <div class="card-body">
+        <h1><%= posting.position %> </h1>
+        <div><span>Start: </span><%= posting.startDate %> </div>
+        <div><span>End: </span><%= posting.endDate %> </div>
+        <div><span class="badge badge-secondary"><%= posting.type %> </span></div>
+        <div><%- posting.logistics %> </div>
+        <div><%- posting.description %> </div>
+        <form action="/admin/posting/manage" method="GET" class="d-inline"><button class="btn btn-success">Done</button>
+        </form>
+        <form action="/admin/posting/<%=posting._id%>/edit" class="d-inline" method="GET"><button
+                class="btn btn-primary ml-3">Edit</button></form>
+    </div>
+</div>

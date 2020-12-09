@@ -1,0 +1,23 @@
+<%- layout('./layouts/template') %>
+<div class="card mt-3" style="background-color: #f6eec9;">
+    <div class="card-body">
+        <h1 class="card-title"><%= course.code %> </h1>
+        <p class="card-text">
+        <div><h5><%= course.title%></h5></div>
+        <div><span>Credits: </span><%= course.credit%> </div>
+        <div><span>Term Offered: </span><%- course.term%> </div>
+        <div><span>Instructor: </span><%- course.instructor%></div>
+        <div><span>Prerequisite: </span><%- course.prerequisite%></div>
+        <div>
+            <span class="badge <%-course.availability=="available" ? "badge-success" :"badge-danger"%>">
+                <%- course.availability%>
+            </span>
+        </div>
+        <div><span>Restriction: </span><%- course.restriction%></div>
+        <div><span>Notes: </span><%- course.notes%></div>
+        <hr>
+        <div><%- course.additional%></div>
+        </p>
+        <div><a href="/academic/course" class="btn btn-primary">All Courses</a></div>
+    </div>
+</div>

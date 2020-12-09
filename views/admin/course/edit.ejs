@@ -1,0 +1,71 @@
+<%- layout('layouts/template')  %>
+<h1 class="text-center">Edit Course</h1>
+<div class="container py-3">
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <form action="/admin/course/<%=course._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="code">Course Code:</label>
+                    <input type="text" name="code" id="code" class="form-control" value="<%=course.code %> " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Course Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" value="<%=course.title%> " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="credit">Credits:</label>
+                    <input type="number" name="credit" id="credit" class="form-control" min="0"
+                        value="<%=course.credit%>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="term">Term Offered:</label>
+                    <input type="text" name="term" id="term" class="form-control" value="<%=course.term%>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructor">Instructor:</label>
+                    <input type="text" name="instructor" id="instructor" class="form-control"
+                        value="<%=course.instructor%> " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prerequisite">Prerequisites:</label>
+                    <input type="text" name="prerequisite" id="prerequisite" class="form-control"
+                        value="<%=course.prerequisite%> " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Select Availability: </label>
+                    <select name="availability" id="availability" class="form-control">
+                        <option value="available" <%-course.availability==="available" ? "selected":""%>>available
+                        </option>
+                        <option value="unavailable" <%-course.availability==="unavailable" ? "selected":""%>>unavailable
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="restriction">Restriction:</label>
+                    <input type="text" name="restriction" id="restriction" class="form-control"
+                        value="<%=course.restriction%> ">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea name="notes" id="notes" class="form-control" cols="30" rows="10"
+                        placeholder="Input HTML or Plain Text (Optional)"><%= course.notes%> </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional">Additional:</label>
+                    <textarea name="additional" id="additional" class="form-control" cols="30" rows="10"
+                        placeholder="Input HTML or Plain Text (Optional)"><%= course.additional %> </textarea>
+                </div>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

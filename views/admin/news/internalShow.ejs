@@ -1,0 +1,21 @@
+<%- layout('./layouts/template') %>
+<div class="card">
+    <div class="card-body">
+        <h1><%= news.title %> </h1>
+        <div>
+            <h3><%= news.date %></h3>
+        </div>
+        <div><%= news.time %> </div>
+        <div><%- news.logistics %> </div>
+        <hr>
+        <div><%- news.description %> </div>
+        <div class="mt-4">
+            <form action="/admin/news/manage" method="GET" class="d-inline">
+                <button class="btn btn-success">Done</button>
+            </form>
+            <form action="/admin/news/<%=news._id%>/edit" method="GET" class="d-inline ml-3">
+                <button class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>

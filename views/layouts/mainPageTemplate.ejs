@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/mainHead')  %>
+
+<body>
+    <div class="container-fluid">
+        <nav class="nav navbar">
+            <!-- header-logo -->
+            <div class="logo" style="margin-top:-10px;">
+                <a href="/">
+                    <img src="https://www.cs.mcgill.ca/~nkanag3/img/SoCS_McGill.png" alt="logo"
+                        style="width: 420px;"></a>
+            </div>
+            <!-- header-nav -->
+            <ul class="nav navbar-expand-sm">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Prospective</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/prospective/overview">Overview</a></li>
+                        <li class="nav-item"><a href="#">Why CS?</a></li>
+                        <li class="nav-item"><a href="/prospective/cegep">CEGEP</a></li>
+                        <li class="nav-item"><a href="/prospective/freshman">Freshman</a></li>
+                        <li class="nav-item"><a href="/prospective/chooseAMajor">Choosing a Major</a></li>
+                        <li class="nav-item"><a href="#">Transfer</a></li>
+                        <li class="nav-item"><a href="#">Internship</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Academic</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/academic/undergraduate">Undergraduate</a></li>
+                        <li class="nav-item"><a href="/academic/graduate">Graduate</a></li>
+                        <li class="nav-item"><a href="/academic/course">Courses</a></li>
+                        <li class="nav-item"><a href="#">Teaching Assistant</a></li>
+                        <li class="nav-item"><a href="#">Funding</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Research</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/research/area">Areas</a></li>
+                        <li class="nav-item"><a href="/research/reports">Tech Reports</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">People</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="/people/faculty">Faculty</a></li>
+                        <li class="nav-item"><a href="#">Staff</a></li>
+                        <li class="nav-item"><a href="#">Community</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="#">Facilities</a></li>
+                        <li class="nav-item"><a href="#">Room Reservation</a></li>
+                        <li class="nav-item"><a href="#">Webmail</a></li>
+                        <li class="nav-item"><a href="/about/donate">Donate</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+        <!-- fill in with contents -->
+        <%- body %>
+
+
+
+
+
+        <!-- Footer -->
+        <footer style="background-color: #aa3a3a ">
+
+            <!--Nav Bar: TechSupport & Employment & Contact & Login-->
+            <div class="container ">
+                <ul class="footer-nav nav navbar-expand-sm "
+                    style="background-color:#aa3a3a; display:flex; justify-content: space-between;">
+                    <!-- Tech Supports -->
+                    <li class="dropdown ft">
+                        <a class="dropdown-toggle" data-toggle="dropdown" id="menu1">Tech Supports</a>
+                        <ul class="dropdown-menu menu1">
+                            <li><a href="support/account">Accounts</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Softwares</a></li>
+                            <li><a href="#">Remote Access</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Employment -->
+                    <li class="dropdown ft ">
+                        <a class="dropdown-toggle " href="# " data-toggle="dropdown" id="menu2">Employment</a>
+                        <ul class="dropdown-menu menu2">
+                            <li><a href="/posting">All Postings</a></li>
+                            <li><a href="# ">Faculty</a></li>
+                            <li><a href="# ">Course Lecturer</a></li>
+                            <li><a href="# ">Research</a></li>
+                            <li><a href="# ">Students</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- News -->
+                    <li class="dropdown ft ">
+                        <a class="dropdown-toggle " href="# " data-toggle="dropdown" id="menu3">News</a>
+                        <ul class="dropdown-menu menu3">
+                            <li><a href="# ">News</a></li>
+                            <li><a href="# ">Events</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="ft "><a href="/contact">Contact</a></li>
+
+                    <!-- Login in -->
+                    <li class="ft "><a href="/login">Administrator Login</a></li>
+                </ul>
+            </div>
+
+            <!-- email and cs-logo -->
+            <div class="col-12 footer-middle ">
+                <div class="email">
+                    All content related requests should be sent to
+                    <a href="mailto:webadmin@cs.mcgill.ca " style="color: dodgerblue "> webadmin at cs dot mcgill dot
+                        ca</a>
+                </div>
+                <img src="https://www.cs.mcgill.ca/static/base/logo-footer.png" alt="socs logo" width="300px"
+                    style="margin-bottom: 15px;">
+            </div>
+
+            <!-- Copyright Bar-->
+            <div class="footer-copyright ">
+                <p>©McGill University 2020 <a href="# ">Credits</a>,Designed by <span>WJQ,CYX,XMK</span></p>
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>

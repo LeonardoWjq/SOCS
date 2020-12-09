@@ -1,0 +1,72 @@
+<%- layout('layouts/template') %>
+<div class="container-fluid">
+
+    <div class="row text-center">
+        <div class="col-12 mt-3">
+            <h1>Manage Courses</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--leave the first column blank-->
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <!--SIDEBAR-->
+            <%- include('../../partials/sidebarAdmin')%>
+            <!-- log out button -->
+            <form action="/logout" method="POST" class="my-2">
+                <button class="btn btn-primary">Sign Out</button>
+            </form>
+        </div>
+
+
+        <div class="col-lg-8" id="text-back">
+            <!-- SEARCH BAR -->
+            <%- include('../../partials/search') %>
+
+
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/admin/course/add" class="btn btn-warning">Add Course</a>
+                    </li>
+
+                    <% for (aCourse of courses){ %>
+                    <li class="list-group-item my-2">
+                        <div>
+                            <a href="/admin/course/<%= aCourse._id %>" class="h2"><%= aCourse.code%></a>
+                        </div>
+                        <div><h5><%= aCourse.title %></h5></div>
+
+                        <div><span>Credits: </span><%= aCourse.credit %></div>
+                        <div><span>Term Offered: </span><%= aCourse.term %></div>
+                        <div><span>Instructor: </span><%= aCourse.instructor %></div>
+                        <div><span>Prerequisites: </span><%= aCourse.prerequisite %></div>
+                        <div>
+                            <span class="badge <%- aCourse.availability=="available" ? "badge-success" : "badge-danger" %> ">
+                                <%= aCourse.availability%>
+                            </span>
+                        </div>
+                        <div><span>Restriction: </span><%= aCourse.restriction %></div>
+                        <div><span>Notes: </span><%- aCourse.notes %></div>
+                        
+                        <div class="my-2">
+                            <form action="/admin/course/<%= aCourse._id%>/edit" class="d-inline" method="GET">
+                                <button class="btn btn-primary">Edit</button>
+                            </form>
+                            <form action="/admin/course/<%= aCourse._id%>?_method=DELETE" class="d-inline ml-1" method="POST">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+
+                    </li>
+                    <% } %>
+                </ul>
+                <form action="/admin" method="GET"><button class="btn btn-dark">Back</button></form>
+
+            </div>
+        </div>
+        <!--leave the last column blank-->
+        <div class="col-lg-1"></div>
+    </div>
+</div>

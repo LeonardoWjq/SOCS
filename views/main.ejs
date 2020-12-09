@@ -1,0 +1,166 @@
+ <% layout('./layouts/mainPageTemplate') %> 
+
+ 
+ <div class="row">
+    <!-- slider -->
+    <div class="col-lg-8">
+        <div id="picInd" class="carousel slide carousel-fade" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#picInd" data-slide-to="0" class="active"></li>
+                <li data-target="#picInd" data-slide-to="1"></li>
+            </ol>
+            <!-- Slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <!-- Mask Color -->
+                    <div class="view">
+                        <!-- picture source -->
+                        <img width="100%" height="100%" src="https://reporter.mcgill.ca/wp-content/uploads/2018/10/141A7689-2.jpg">
+                        <div class="mask rgba-indigo-light"></div>
+                    </div>
+                </div>
+
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <!-- Mask Color -->
+                    <div class="view">
+                        <!-- picture source -->
+                        <img width="100%" height="100%" src="https://cdn-res.keymedia.com/cms/images/ca/120/0299_637105729273958924.jpg">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev carousel-control-size" href="#picInd" role="button" data-slide="prev" style="height:0%;width:10%; margin-top:50%">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next carousel-control-size" href="#picInd" role="button" data-slide="next" style="height:0%;width:10%; margin-top:50%;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+       <%-include('partials/search') %> 
+    </div>
+
+</div>
+
+
+<!-- MIDDLE PART -->
+<div class="menu">
+    <div id="accordion">
+        <div class="card">
+            <!-- Admission -->
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne" style="color:#aa3a3a">
+                Admission
+            </a>
+            </div>
+            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <a herf="#">Undergraduate</a>
+                </div>
+                <div class="card-body">
+                    <a herf="#">Graduate</a>
+                </div>
+            </div>
+
+            <!-- Research -->
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color:#aa3a3a">
+                Research
+            </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <a herf="#">Artificial Intelligence</a>
+                </div>
+                <div class="card-body">
+                    <a herf="#">Computer Games</a>
+                </div>
+                <div class="card-body">
+                    <a herf="#">View More</a>
+                </div>
+            </div>
+
+            <!--: Academic -->
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree" style="color:#aa3a3a">
+                Academic
+            </a>
+            </div>
+            <div id=" collapseThree " class="collapse " data-parent="#accordion ">
+                <div class="card-body ">
+                    <a herf="# ">Programs</a>
+                </div>
+                <div class="card-body ">
+                    <a herf="# ">Courses</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row msg-block">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">News & Events</h5>
+                <p class="card-text">
+                    <ul class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Virtual Open House 2020 | Portes ouvertes virtuelle 2020
+                            <br>
+                            Oct. 25, 2020 Announcement
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Concerns related to COVID-19
+                            <br>
+                            Oct. 5, 2020 Announcement
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Three SOCS professors are awarded large grants to use AI to understand cancer
+                            <br>
+                            Nov. 5, 2020 Award
+                        </a>
+
+                    </ul>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Posting</h5>
+                <p class="card-text">
+                    <ul class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Clinical Research Coordinator (Research Institute)
+                            <br>
+                            Ongoing until position is filled. 
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Dawson College urgently looking for part-time CS teacher to start January 27!
+                            <br>
+                            Jan. 17, 2020 - Jan. 27, 2020 
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Positions available in the NIST lab for Fall 2019
+                            <br>
+                            Jan. 17, 2020 - Jan. 27, 2020 
+                        </a>
+                    </ul>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

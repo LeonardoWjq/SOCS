@@ -1,0 +1,27 @@
+<%- layout('./layouts/template') %>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-2">
+            <%-include('../partials/sidebarNews')  %> 
+        </div>
+        <div class="col-lg-8" id="text-back">
+            <%-include('../partials/search') %>
+            <ul class="list-group">
+                <% for (aNews of news){ %>
+                <li class="list-group-item">
+                    <div><a href="/news/<%= aNews._id %>" class="h2"><%= aNews.title %></a></div>
+                    <div class="h5"> <%= aNews.date %><span>&emsp;</span><%= aNews.time %></div>
+                    <div><span class="badge badge-secondary"><%= aNews.type %></span></div>
+                    <hr>
+                    <div><%- aNews.logistics %></div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>

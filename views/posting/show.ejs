@@ -1,0 +1,14 @@
+
+<%- layout('./layouts/template') %>
+<div class="card mt-3" style="background-color: #f6eec9;">
+    <div class="card-body">
+        <h1 class="card-title"><%= posting.position %> </h1>
+        <p class="card-text">
+        <div><span>Start: </span><%= posting.startDate%> </div>
+        <div><span>End: </span><%= posting.endDate %> </div>
+        <div><%- posting.logistics %> </div>
+        <div><%- posting.description %> </div>
+        </p>
+        <div><a href="/posting" class="btn btn-primary">All Postings</a></div>
+    </div>
+</div>

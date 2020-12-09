@@ -1,0 +1,25 @@
+<!-------------------------------------
+    SEARCH BAR FOR SUBPAGE WITH NO SIDEBAR
+ -------------------------------------->
+<br>
+<div class="row mb-3">
+    <div class="col-lg-0"></div>
+    <div class="col-lg-10">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- The form -->
+        <form class="search-bar" id="search" action="https://www.google.com/search"  method="GET">
+            <input type="text" placeholder="Search Anything" name="q" id="searchInput">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<script>
+    const form = document.querySelector("#search")
+    form.addEventListener('submit',function(e){
+        const searchQuery = document.querySelector('#searchInput')
+        searchQuery.value = `McGill SOCS ${searchQuery.value}`
+    })
+</script>

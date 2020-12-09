@@ -1,0 +1,35 @@
+<%layout('layouts/template') %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-2">
+            <%-include('../partials/sidebarPosting')  %>
+        </div>
+        <div class="col-lg-8">
+            <%-include('../partials/search') %>
+            <ul class="list-group" id="text-back">
+                <% for (aPosting of postings){ %>
+
+                <li class="list-group-item my-2">
+                    <div>
+                        <h3><a href="/posting/<%= aPosting._id %>"><%= aPosting.position%></a></h3>
+                    </div>
+                    <div class="h5">
+                        <span>Start: &nbsp;</span>
+                        <%= aPosting.startDate %>
+                        <% if (aPosting.endDate){%>
+                        <span class="ml-5">End:&nbsp;</span>
+                        <%= aPosting.endDate %>
+                        <% } %>
+                    </div>
+                    <div><span class="badge badge-secondary"><%= aPosting.type %></span></div>
+                    <hr>
+                    <div><%- aPosting.logistics %></div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<% layout('./layouts/template')%>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <%-include('../partials/sidebarProspective')  %>
+            </div>
+            <div class="col-lg-8" id="text-back">
+                <%-include('../partials/search') %>
+                    <%-include('combineContent') %>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,420 @@
+/* style for SIDEBAR */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #fbf7f0;
+    width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    width: 90%;
+    /*min-height: 100vh;*/
+    background: #ce6262;
+    color: #fbf7f0;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.sidebar-header {
+    color: #fbf7f0;
+    background-color: #aa3a3a;
+    padding-left: 10px;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    ;
+}
+
+#sidebar.active {
+    margin-left: -80%;
+}
+
+#sidebar ul.components {
+    padding: 10px 0;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    line-height: 2;
+}
+
+#sidebar ul li a:hover {
+    color: #ce6262;
+    background: #fbf7f0;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fbf7f0;
+    background: #ce6262;
+}
+
+
+/* dropdwon menu */
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
+/* acts a little triangle on the side */
+
+#sidebar .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+#sidebar ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #aa3a3a;
+}
+
+#sidebar ul ul a:hover {
+    border-style: solid;
+    border-color: #aa3a3a;
+}
+
+
+/* style for TEXT content */
+
+#text-back h3 {
+    color: #aa3a3a;
+}
+
+#text-back a {
+    color: #aa3a3a;
+}
+
+#text-back a:hover {
+    color: #aa3a3a;
+    background: lightgray;
+    border-radius: 3px;
+    /* #f9e0ae */
+}
+
+
+/* style for VIDEO content */
+
+
+/* change the size of the control button on prev and next */
+
+.carousel-control-size {
+    height: 30%;
+    width: 5%;
+    margin-top: 20%;
+}
+
+
+/* style for login subpage */
+
+#text-back h4 {
+    color: #ce6262;
+}
+
+#login-back .col-lg-10 {
+    background: #f2efea;
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+}
+
+#login-title {
+    text-align: center;
+}
+
+#login-back .card1 {
+    width: 70%;
+    align-items: center;
+    margin: 15px auto 15px auto;
+    border-radius: 15px;
+}
+
+#login-back .card-title {
+    text-align: center;
+    border-radius: 5px;
+}
+
+#login-back .btn {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: #aa3a3a;
+    border: 2px solid;
+    color: #aa3a3a;
+    width: 100%;
+}
+
+#login-back .card2 {
+    width: 70%;
+    margin: 15px auto 15px auto;
+    border-radius: 15px;
+}
+
+#login-back .card2 .btn-lg {
+    background: opacity;
+    border: none;
+    background: none;
+    color: white;
+    /* remove the border of the button on click */
+    outline: none;
+}
+
+
+/* style for cantacts page (with MAP) */
+
+#contact-back .col-lg-10 {
+    background: #f2efea;
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+}
+
+#contact-back h4 {
+    color: #aa3a3a;
+}
+
+#contact-back p {
+    font-size: 0.9em;
+}
+
+#contact-back a {
+    color: #ce6262;
+}
+
+#contact-back a:hover {
+    background: lightgray;
+    color: #aa3a3a;
+}
+
+
+/* style for search bar */
+
+#btn-search {
+    background: #f2efea;
+    border: 2px solid;
+    border-color: lightsteelblue;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the search field */
+
+form.search-bar input[type=text] {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid grey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    float: left;
+    width: 80%;
+    background: #f2efea;
+}
+
+
+/* Style the submit button */
+
+form.search-bar button {
+    margin-top: 10px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #efd9d1;
+    color: white;
+    font-size: 1em;
+    border: 1px solid grey;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.search-bar button:hover {
+    background: #aa3a3a;
+}
+
+
+/* Clear floats */
+
+form.search-bar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* style for donate subpage */
+
+#donate .title-big {
+    text-align: center;
+    font-size: 4.5em;
+}
+
+
+/* style for courses subpage */
+
+#courses-nav #sidebar {
+    background: #efd9d1;
+}
+
+#courses-nav ul li.active>a,
+a[aria-expanded="true"] {
+    color: #532e1c;
+    background: #efd9d1;
+}
+
+#courses-nav ul ul li {
+    background: #fbf7f0;
+    padding: 20px;
+    color: #532e1c;
+}
+
+#courses-nav ul ul a {
+    background: none;
+    border: none;
+    display: block;
+    position: relative;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+
+#courses-nav ul ul a:hover {
+    background: none;
+    padding: 0;
+}
+
+
+/* style for dropdown item in list subpage */
+
+#list-nav .btn {
+    background: #efd9d1;
+}
+
+
+/* style for list group  */
+
+#text-back .list-group-item {
+    color: #532e1c;
+}
+
+#text-back .list-group a:hover {
+    background: #efd9d1;
+}
+
+
+/* style for header */
+.headerNav a{
+    color: white;
+    line-height: 3em;
+    margin: 3%;
+}
+
+
+.navbar {
+    background: #aa3a3a;
+    padding-right: 25px;
+    height: 8em;
+    padding-top: 5px;
+}
+
+.dropdown {
+    margin-right: 40px;
+    align-content: center;
+}
+
+.dropdown-menu {
+    background-color: indianred;
+    color: white;
+    border-color: white;
+    width: 10px;
+}
+
+.nav-item {
+    display: block;
+    text-align: left;
+}
+
+
+/* style for footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    height: 50px;
+    align-items: center;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    background: #aa3a3a;
+}
+
+.ft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email {
+    font-size: 10px;
+    color: white;
+    float: bottom;
+}
+
+.footer-copyright {
+    font-size: 30%;
+    background: #7d0633;
+    color: white;
+    text-align: center;
+}
+
+
+/* admin page styling */
+.adminSide button:hover {
+    color: #ce6262;
+    background: #fbf7f0;
+}
